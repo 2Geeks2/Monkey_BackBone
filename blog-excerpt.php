@@ -1,4 +1,5 @@
 <?php 
+include("page_content/page_functions.php");
 if(have_posts()){
 while(have_posts()){
 	the_post(); ?>
@@ -15,6 +16,7 @@ while(have_posts()){
 					<?php the_post_thumbnail('medium'); ?>
 				</div>
 			<?php }
+			page_content();
 			the_excerpt(); ?>
 		</span>
 		<div class="clearfix"></div>
