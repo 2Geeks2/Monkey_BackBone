@@ -24,8 +24,12 @@ $right_text = sanitize_text_field( get_theme_mod(  'lm-home-right-text', 'Lorem 
             <div class="col-md-6 left-home">     
                 <h1 id="home-header"><?php echo $header_text; ?></h1>
                 <h3 id="home-subheader"><?php echo $subheader_text; ?></h3>
-                <?php echo '<div id="home-text">' . $content_text . '</div>'; ?>
-                <?php echo '<div><a href="' . $cta_url . '" id="home-cta-button">' . $cta_text . '</a></div>'; ?>
+
+                <?php echo '<div class="home-text">' . $content_text . '</div>'; ?>
+		<?php echo '<div><a href="http://medicalmonkeys.ddns.net/donors/" id="home-cta-button">' . $cta_text . '</a></div>'; ?>
+
+                <?php echo '<div class="home-text"> Challenge your friends, show your ability and increase the skills of our team. And get a 3D Print of your Organs! </div>'; ?>
+                <?php echo '<div><a href="http://medicalmonkeys.ddns.net/gamerlogin/" id="home-cta-button"> I am a Gamer! </a></div>'; ?>
             </div>
             <div class="col-md-6 right-home">
                 <div id="home-img-wrapper">
@@ -48,6 +52,7 @@ $right_text = sanitize_text_field( get_theme_mod(  'lm-home-right-text', 'Lorem 
         </div>
     </div>
 </div>
+<?php echo do_shortcode("[slide-anything id='105']");  ?>
 <div class="container-wrapper container-wrapper-bg home-container-wrapper bottom-home-container-wrapper">
     <div class="container section-container">
         <div class="row section">
@@ -82,7 +87,8 @@ $right_text = sanitize_text_field( get_theme_mod(  'lm-home-right-text', 'Lorem 
     </div>
 </div>
 <?php the_content(); ?>
-<?php get_footer(); ?>
+<?php 
+get_footer(); ?>
 <script type="text/javascript">
     function resizeIframe(selector){
       var iframe = jQuery(selector);
